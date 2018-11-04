@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "scripts": {
     "start:client": "react-scripts start",
-    "server:dev": "NODE_ENV=development node server/index.js",
-    "server:prod": "NODE_ENV=production node server/index.js",
+    "server:dev": "cross-env NODE_ENV=development node server/index.js",
+    "server:prod": "cross-env NODE_ENV=production node server/index.js",
     "start": "run-p server:dev start:client",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -12,7 +12,7 @@
     "format": "prettier --write \"**/*.{tsx,ts,css,md,js}\""
   },
   "dependencies": {
-    "apollo-boost": "^0.1.19",
+    "apollo-boost": "^0.1.20",
     "apollo-server": "^2.1.0",
     "apollo-server-express": "^2.1.0",
     "express": "^4.16.4",
@@ -27,6 +27,7 @@
     "styled-components": "^4.0.3"
   },
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "prettier": "^1.14.3"
   },
   "eslintConfig": {

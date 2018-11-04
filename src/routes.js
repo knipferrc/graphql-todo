@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Todos from './views/todos'
+import Todos from './modules/todos'
 
 function Routes() {
   return (

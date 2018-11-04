@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import Routes from '../../routes'
+import Routes from '../../../routes'
 import { ApolloProvider } from 'react-apollo'
-import { client } from '../../store/apolloClient'
+import { client } from '../../../store/apolloClient'
 
 function App() {
   return (
