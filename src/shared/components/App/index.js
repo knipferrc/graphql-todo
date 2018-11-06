@@ -1,16 +1,17 @@
-import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import React, { Fragment } from 'react'
 import Routes from '../../../routes'
 import { ApolloProvider } from 'react-apollo'
-import { client } from '../../../store/apolloClient'
+import { client } from '../../../core/store/apolloClient'
+import GlobalStyle from '../GlobalStyle'
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <BrowserRouter>
+    <Fragment>
+      <GlobalStyle />
+      <ApolloProvider client={client}>
         <Routes />
-      </BrowserRouter>
-    </ApolloProvider>
+      </ApolloProvider>
+    </Fragment>
   )
 }
 

@@ -1,7 +1,10 @@
-import gql from 'graphql-tag'
+import gql from 'graphql-tag.macro'
 
 export const todosQuery = gql`
   query {
-    todos
+    todos {
+      key
+      value
+    }
   }
 `

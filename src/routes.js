@@ -1,12 +1,17 @@
-import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import Todos from './modules/todos'
+import React, { lazy, Suspense } from 'react'
+import { Route, Switch, BrowserRouter } from 'react-router-dom'
+
+const Todos = lazy(() => import('./modules/todos'))
 
 function Routes() {
   return (
-    <Switch>
-      <Route exact path="/" component={Todos} />
-    </Switch>
+    <BrowserRouter>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Switch>
+          <Route exact path="/" component={Todos} />
+        </Switch>
+      </Suspense>
+    </BrowserRouter>
   )
 }
 

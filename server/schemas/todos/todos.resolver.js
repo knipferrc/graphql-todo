@@ -1,6 +1,6 @@
 const todosResolver = {
   Query: {
-    todos: () => 'Need to implement todos'
+    todos: () => [{ key: 1, value: 'Todo 1' }]
   }
 }
 
