@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
-import Routes from '../../../routes'
+import Routes from '../../routes'
 import { ApolloProvider } from 'react-apollo'
-import { client } from '../../../core/store/apolloClient'
+import { client } from '../../store/apolloClient'
 import GlobalStyle from '../GlobalStyle'
 
 function App() {

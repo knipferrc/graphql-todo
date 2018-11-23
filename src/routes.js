@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from 'react'
 import { Route, Switch, BrowserRouter } from 'react-router-dom'
 
-const Todos = lazy(() => import('./modules/todos'))
+const Todos = lazy(() => import('./views/todos'))
 
 function Routes() {
   return (
